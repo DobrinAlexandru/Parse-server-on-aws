@@ -1,0 +1,13 @@
+var map;
+var openInfowindow;
+var previous_pos = 0;
+var locations = [];
+var wifiLoaded = 0;
+// var flightPath;
+var markers = [];
+var infowindows = [];
+var circles = [];
+var wifis =[];
+var wifisBatch = [];
+var wifiBatchDetected = [];
+var wifiDetected = 0;
