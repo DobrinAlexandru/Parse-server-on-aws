@@ -12,14 +12,13 @@ if (!databaseUri) {
 } else {
 	console.log("database defined");
 }
-console.log("dirname:" + __dirname);
 
 var api = new ParseServer({
   databaseURI: 'mongodb://intersect:4wabbit4@ds033015.mlab.com:33015/hotornot',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   masterKey: '1o6z9ePR3qPnRU0jHIP4iWToNzkANKIr3UNHwelq',
   appId: process.env.APP_ID || 'utXysazDczvny5sBUme5HZIzfUrybjppWIc8aVGb', //Add your master key here. Keep it secret!
-  serverURL: 'http://parseserver-2qqi8-env-test.eu-west-1.elasticbeanstalk.com/parse',  // Don't forget to change to https if needed
+  SERVER_URL: 'http://parseserver-2qqi8-env-test.eu-west-1.elasticbeanstalk.com'
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
@@ -31,21 +30,19 @@ var api = new ParseServer({
 var app = express();
 
 // Serve static assets from the /public folder
-app.use('/public', express.static(path.join(__dirname, '/public')));
+app.use('/', express.static(path.join(__dirname, '/')));
 
 // Serve the Parse API on the /parse URL prefix
 var mountPath = process.env.PARSE_MOUNT || '/parse';
 app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
-app.get('/', function(req, res) {
-  res.status(200).send('Laur are pula mare');
-});
+
 
 // There will be a test page available on the /test path of your server url
 // Remove this before launching your app
-app.get('/test', function(req, res) {
-  res.sendFile(path.join(__dirname, '/public/test.html'));
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/index.html'));
 });
 
 var port = process.env.PORT || 1337;
