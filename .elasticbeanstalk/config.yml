@@ -1,6 +1,8 @@
 branch-defaults:
   master:
     environment: parseserver-2qqi8-env-test
+  test:
+    environment: hotornot-test-dev
 global:
   application_name: hotornot-test
   default_ec2_keyname: intersect_key
