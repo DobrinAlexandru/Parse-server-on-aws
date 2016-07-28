@@ -10,6 +10,10 @@ serverURL: 'http://parseserver-2qqi8-env-test.eu-west-1.elasticbeanstalk.com/par
 Start with node server.js  from cmd line inside project path
 
 
+
+ masterKey: '1o6z9ePR3qPnRU0jHIP4iWToNzkANKIr3UNHwelq',
+ appId: 'utXysazDczvny5sBUme5HZIzfUrybjppWIc8aVGb',
+
 Post a sample object to the newly deployed setup. Replace the APP_ID with the APP_ID on your Parse Dashboard setup. Replace the hostname in the URL with the URL that is at the top of your Elastic Beanstalk Dashboard.
 
 curl -X POST \
