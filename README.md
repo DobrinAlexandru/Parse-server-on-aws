@@ -7,4 +7,4 @@ Zip project files and deploy them via cmd or upload it on aws .( Don't upload wi
 
 Development(localhost):
 serverURL: 'http://parseserver-2qqi8-env-test.eu-west-1.elasticbeanstalk.com/parse'
-Start with node server.js / npm start from cmd line inside project path
+Start with node server.js  from cmd line inside project path
