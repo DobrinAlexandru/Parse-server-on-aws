@@ -1,6 +1,6 @@
 {
   "name": "parse-server-example",
-  "version": "1.6.3",
+  "version": "1.6.6",
   "description": "An example Parse API server using the parse-server module",
   "main": "server.js",
   "repository": {
